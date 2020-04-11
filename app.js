@@ -16,10 +16,10 @@ app.use('/js', express.static(path.join(__dirname, '/node_modules/@popperjs/core
 app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
 
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/views/index.html'));
 });
 
-app.listen(3000, function () {
+app.listen(3000, () => {
   debug(`Listening to Port ${chalk.green('3000')}`);
 });
