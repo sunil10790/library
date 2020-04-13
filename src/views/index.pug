@@ -3,8 +3,9 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        title(id='main-title')= title
     body
-        h1 My App in PUG
-        p
-            h3 Sub Heading
+        h1(class=["main-heading"]) My App in PUG
+        ul
+            each val in bookList
+                li= val
